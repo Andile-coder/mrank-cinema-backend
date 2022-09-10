@@ -1,7 +1,7 @@
 import express, { Application } from 'express';
 import cors from 'cors';
 import { wrapper } from '../Middlewares/Wrapper';
-import AuthRoutes from '../Routes/Auth';
+import BookingRoutes from '../Routes/Booking';
 
 export class ServerConfig {
   private server: Application = express();
@@ -33,7 +33,7 @@ export class ServerConfig {
       response.status(200).json({ msg: '🔥MRANK-CLUB🔥' });
     });
 
-    this.server.use(AuthRoutes);
+    this.server.use(BookingRoutes);
 
     //Global Error Handler
     this.server.use(wrapper);
