@@ -4,7 +4,7 @@ import { wrapper } from '../Middlewares/Wrapper';
 import BookingRoutes from '../Routes/Booking';
 
 export class ServerConfig {
-  private server: Application = express();
+  public server: Application = express();
 
   constructor() {
     this._middleware();
